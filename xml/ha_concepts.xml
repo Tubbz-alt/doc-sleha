@@ -40,7 +40,7 @@
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
@@ -635,13 +635,12 @@
       <listitem>
       <para>
         The local resource manager is located between the Pacemaker layer and the
-        resources layer on each node. It is implemented as <systemitem
-        class="daemon">pacemaker-execd</systemitem> daemon. Through this daemon,
+        resources layer on each node. It is implemented as <systemitem class="daemon">pacemaker-execd</systemitem> daemon. Through this daemon,
         Pacemaker can start, stop, and monitor resources.
       </para>
       </listitem>
      </varlistentry>
-      <varlistentry  xml:id="vle-cib">
+      <varlistentry xml:id="vle-cib">
        <term>Cluster Information Database (CIB)</term>
        <listitem>
         <para>
@@ -702,8 +701,7 @@
     monitors all other related daemons. The daemon that coordinates all actions,
     <systemitem class="daemon">pacemaker-controld</systemitem>, has an instance on
     each cluster node. Pacemaker centralizes all cluster decision-making by
-    electing one of those instances as a master. Should the elected <systemitem
-    class="daemon">pacemaker-controld</systemitem> daemon fail, a new one is
+    electing one of those instances as a master. Should the elected <systemitem class="daemon">pacemaker-controld</systemitem> daemon fail, a new one is
     established.
    </para>
    <para>
@@ -721,16 +719,13 @@
     cluster nodes.
    </para>
    <para>
-    Based on the information in the CIB, the <systemitem
-    class="daemon">pacemaker-schedulerd</systemitem> then computes the ideal
+    Based on the information in the CIB, the <systemitem class="daemon">pacemaker-schedulerd</systemitem> then computes the ideal
     state of the cluster and how it should be achieved. It feeds a list of
     instructions to the DC. The DC sends commands via the messaging/infrastructure
-    layer which are received by the <systemitem
-    class="daemon">pacemaker-controld</systemitem> peers on
+    layer which are received by the <systemitem class="daemon">pacemaker-controld</systemitem> peers on
     other nodes. Each of them uses its local resource agent executor (implemented
     as <systemitem class="daemon">pacemaker-execd</systemitem>) to perform
-    resource modifications. The <systemitem
-     class="daemon">pacemaker-execd</systemitem> is not cluster-aware and interacts
+    resource modifications. The <systemitem class="daemon">pacemaker-execd</systemitem> is not cluster-aware and interacts
     directly with resource agents.
    </para>
    <para>
@@ -749,8 +744,7 @@
     fencing subsystem, <systemitem class="daemon">pacemaker-fenced</systemitem>.
     &stonith; devices have to be configured as cluster resources (that use
     specific fencing agents), because this allows to monitor the fencing devices.
-    When clients detect a failure, they send a request to <systemitem
-     class="daemon">pacemaker-fenced</systemitem>,
+    When clients detect a failure, they send a request to <systemitem class="daemon">pacemaker-fenced</systemitem>,
     which then executes the fencing agent to bring down the node.
    </para>
   </sect2>

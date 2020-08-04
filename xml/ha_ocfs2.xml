@@ -21,7 +21,7 @@
    </para>
       </abstract>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
       </dm:docmanager>
     </info>
     <indexterm class="startofrange" xml:id="idx-filesystems-ocfs2">
@@ -311,8 +311,7 @@
   </procedure>
 
   <para>
-    For details on configuring the resource group for DLM, see <xref
-     linkend="pro-dlm-resources"/>.
+    For details on configuring the resource group for DLM, see <xref linkend="pro-dlm-resources"/>.
   </para>
  </sect1>
  <sect1 xml:id="sec-ha-ocfs2-create">

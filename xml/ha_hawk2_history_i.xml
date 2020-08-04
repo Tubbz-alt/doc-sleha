@@ -12,19 +12,18 @@
  <title>Viewing the Cluster History</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:maintainer/>
-   <dm:status>editing</dm:status>
-   <dm:deadline/>
-   <dm:priority/>
-   <dm:translation>yes</dm:translation>
-   <dm:languages/>
-   <dm:release/>
-   <dm:repository/>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
+      </dm:docmanager>
+    </info>
+    <para>
   &hawk2; provides the following possibilities to view past events on the
   cluster (on different levels and in varying detail):
  </para>
@@ -107,12 +106,10 @@
       <informalfigure>
        <mediaobject>
         <imageobject role="fo">
-         <imagedata fileref="hawk2-node-events.png" width="100%"
-          format="PNG"/>
+         <imagedata fileref="hawk2-node-events.png" width="100%" format="PNG"/>
         </imageobject>
         <imageobject role="html">
-         <imagedata fileref="hawk2-node-events.png" width="90%"
-          format="PNG"/>
+         <imagedata fileref="hawk2-node-events.png" width="90%" format="PNG"/>
         </imageobject>
        </mediaobject>
       </informalfigure>
@@ -164,12 +161,10 @@
    <title>&hawk2;&mdash;History Explorer Main View</title>
    <mediaobject>
     <imageobject role="fo">
-     <imagedata fileref="hawk2-history-explorer-main.png" width="100%"
-      format="PNG"/>
+     <imagedata fileref="hawk2-history-explorer-main.png" width="100%" format="PNG"/>
     </imageobject>
     <imageobject role="html">
-     <imagedata fileref="hawk2-history-explorer-main.png" width="90%"
-      format="PNG"/>
+     <imagedata fileref="hawk2-history-explorer-main.png" width="90%" format="PNG"/>
     </imageobject>
    </mediaobject>
   </figure>
@@ -249,20 +244,17 @@
    <step>
     <para>
      To view
-     <xref linkend="il-hawk2-history-report-details"
-      xrefstyle="select:title"/>,
+     <xref linkend="il-hawk2-history-report-details" xrefstyle="select:title"/>,
      click the report's name or select <guimenu>Show</guimenu> from the
      <guimenu>Operations</guimenu> column.
     </para>
     <informalfigure>
      <mediaobject>
       <imageobject role="fo">
-       <imagedata fileref="hawk2-history-report-details.png" width="100%"
-       format="PNG"/>
+       <imagedata fileref="hawk2-history-report-details.png" width="100%" format="PNG"/>
       </imageobject>
       <imageobject role="html">
-       <imagedata fileref="hawk2-history-report-details.png" width="90%"
-       format="PNG"/>
+       <imagedata fileref="hawk2-history-report-details.png" width="90%" format="PNG"/>
       </imageobject>
      </mediaobject>
     </informalfigure>
@@ -296,8 +288,7 @@
      Number of transitions plus time line of all transitions in the cluster
      that are covered by the report. To learn how to view more details for a
      transition, see
-     <xref linkend="sec-conf-hawk2-history-transitions"
-      xrefstyle="select:label"/>.
+     <xref linkend="sec-conf-hawk2-history-transitions" xrefstyle="select:label"/>.
     </para>
    </listitem>
    <listitem>
@@ -322,8 +313,7 @@
    <filename>pe-*</filename> files are generated on the Designated
    Coordinator (DC). As the DC can change in a cluster, there may be
    <filename>pe-*</filename> files from several nodes. Any <filename>pe-*</filename>
-   files are saved snapshots of the CIB, used as input of calculations by <systemitem
-    class="daemon">pacemaker-schedulerd</systemitem>.
+   files are saved snapshots of the CIB, used as input of calculations by <systemitem class="daemon">pacemaker-schedulerd</systemitem>.
   </para>
   <para>
    In &hawk2;, you can display the name of each <filename>pe-*</filename>
@@ -412,8 +402,7 @@
      If reports have already been generated or uploaded, they are shown in the
      list of <guimenu>Reports</guimenu>. Otherwise generate or upload a report
      as described in
-     <xref linkend="pro-hawk2-history-report"
-     xrefstyle="select:label"/>.
+     <xref linkend="pro-hawk2-history-report" xrefstyle="select:label"/>.
     </para>
    </step>
    <step>

@@ -20,14 +20,14 @@ toms 2014-05-27:
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
       </dm:docmanager>
- <abstract>
-  <para>
-  <emphasis>Load Balancing</emphasis> makes a cluster of servers appear as
+      <abstract>
+        <para>
+          <emphasis>Load Balancing</emphasis> makes a cluster of servers appear as
   one large, fast server to outside clients. This apparent single server is
   called a <emphasis>virtual server</emphasis>. It consists of one or more
   load balancers dispatching incoming requests and several real servers
@@ -35,8 +35,8 @@ toms 2014-05-27:
   can build highly scalable and highly available network services, such as
   Web, cache, mail, FTP, media and VoIP services.
  </para>
- </abstract>
- </info>
+      </abstract>
+    </info>
     <!--taroth 090519: see http://www.linuxvirtualserver.org/-->
  <sect1 xml:id="sec-ha-lb-overview">
   <title>Conceptual Overview</title>

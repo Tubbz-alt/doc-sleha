@@ -7,7 +7,6 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <book version="5.0" xml:lang="en" xml:id="book-sleha-quickstarts"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:dm="urn:x-suse:ns:docmanager"
@@ -15,13 +14,17 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
 
  <info>
-   <title>Quick Start Guides</title>
-   <productname>&productname;</productname>
-   <date><?dbtimestamp format="B d, Y"?></date>
-   <xi:include href="common_copyright_gfdl.xml"/>
- </info>
-
- <xi:include href="art_sle_ha_install_quick.xml"/>
+      <title>Quick Start Guides</title>
+      <productname>&productname;</productname>
+      <date>
+        <?dbtimestamp format="B d, Y"?>
+      </date>
+      <xi:include href="common_copyright_gfdl.xml"/>
+      <dm:docmanager>
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <xi:include href="art_sle_ha_install_quick.xml"/>
  <xi:include href="art_sle_ha_geo_quick.xml"/>
  <xi:include href="art_sle_ha_nfs_quick.xml"/>
  <xi:include href="art_sle_ha_pmremote.xml"/>

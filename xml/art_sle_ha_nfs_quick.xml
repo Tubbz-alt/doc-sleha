@@ -21,17 +21,22 @@
  <title>&nfsquick;</title>
  <subtitle>&productname; &productnumber;</subtitle>
  <info>
-  <productnumber>&productnumber;</productnumber>
-  <productname>&productname;</productname>
-  <date><?dbtimestamp?></date>
-  <xi:include href="ha_authors.xml"/>
-  <abstract>
-   <para>
+      <productnumber>&productnumber;</productnumber>
+      <productname>&productname;</productname>
+      <date>
+        <?dbtimestamp?>
+      </date>
+      <xi:include href="ha_authors.xml"/>
+      <abstract>
+        <para>
     &abstract-nfsquick;
    </para>
-  </abstract>
-  </info>
- <sect1 xml:id="sec-ha-quick-nfs-usagescenario">
+      </abstract>
+      <dm:docmanager>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <sect1 xml:id="sec-ha-quick-nfs-usagescenario">
   <title>Usage Scenario</title>
   <para>
    This document will help you set up a highly available NFS server.
@@ -43,18 +48,14 @@
    <!-- Taken from art_sle_ha_install_quick.xml: -->
    <listitem>
     <para>
-     Two nodes: <systemitem class="server">&node1;</systemitem> (IP: <systemitem
-      class="ipaddress">&subnetI;.1</systemitem>)
-     and <systemitem class="server">&node2;</systemitem> (IP: <systemitem
-      class="ipaddress">&subnetI;.2</systemitem>),
+     Two nodes: <systemitem class="server">&node1;</systemitem> (IP: <systemitem class="ipaddress">&subnetI;.1</systemitem>)
+     and <systemitem class="server">&node2;</systemitem> (IP: <systemitem class="ipaddress">&subnetI;.2</systemitem>),
      connected to each other via network.
     </para>
    </listitem>
    <listitem>
     <para>
-     Two floating, virtual IP addresses (<systemitem class="ipaddress"
-      >&nfs-vip-hawk;</systemitem> and <systemitem class="ipaddress"
-      >&nfs-vip-exports;</systemitem>), allowing clients to connect to
+     Two floating, virtual IP addresses (<systemitem class="ipaddress">&nfs-vip-hawk;</systemitem> and <systemitem class="ipaddress">&nfs-vip-exports;</systemitem>), allowing clients to connect to
      the service no matter which physical node it is running on.
      One IP address is used for cluster administration with &hawk2;, the other
      IP address is used exclusively for the NFS exports.
@@ -137,9 +138,7 @@
      </step>
    </procedure>
    <para>After you have successfully executed the above steps, your system
-    will make visible the following device: <filename>/dev/<replaceable
-     >VOLGROUP</replaceable>/<replaceable
-      >LOGICAL_VOLUME</replaceable></filename>.
+    will make visible the following device: <filename>/dev/<replaceable>VOLGROUP</replaceable>/<replaceable>LOGICAL_VOLUME</replaceable></filename>.
     In this case it will be <filename>/dev/nfs/work</filename>.
    </para>
   </sect1>
@@ -181,8 +180,7 @@
       </para>
      </listitem>
      <listitem>
-      <para>Put your resource configuration in a file with a <filename
-       class="extension">.res</filename> extension. In the following
+      <para>Put your resource configuration in a file with a <filename class="extension">.res</filename> extension. In the following
         examples, the file <filename>/etc/drbd.d/nfs.res</filename> is
         used.
       </para>
@@ -227,8 +225,7 @@
        </callout>
        <callout arearefs="co-ha-quick-nfs-drbd-disk">
         <para>The lower-level block device used by DRBD to store the actual
-         data. This is the LVM device that was created in <xref
-          linkend="sec-ha-quick-nfs-lvm"/>.
+         data. This is the LVM device that was created in <xref linkend="sec-ha-quick-nfs-lvm"/>.
         </para>
        </callout>
        <callout arearefs="co-ha-quick-nfs-drbd-metadisk">
@@ -306,8 +303,7 @@ include /etc/drbd.d/*.res;</screen>
        If the DRBD devices on all nodes have the same data, skip
        the initial resynchronization. Use the following command:
       </para>
-      <screen>&prompt.root;<command>drbdadm</command
-              > new-current-uuid --clear-bitmap nfs/0</screen>
+      <screen>&prompt.root;<command>drbdadm</command> new-current-uuid --clear-bitmap nfs/0</screen>
      </step>
      <step>
        <para>Make <systemitem>&node1;</systemitem> primary:</para>
@@ -333,8 +329,7 @@ include /etc/drbd.d/*.res;</screen>
 
    <sect2 xml:id="sec-ha-quick-nfs-drbd-createfs">
     <title>Creating the File System</title>
-    <para>After you have finished <xref
-      linkend="sec-ha-quick-nfs-drbd-activate"/>,
+    <para>After you have finished <xref linkend="sec-ha-quick-nfs-drbd-activate"/>,
     you should see a DRBD device on <filename>/dev/drbd0</filename>:
     </para>
     <screen>&prompt.root;<command>mkfs.ext3</command> /dev/drbd0</screen>
@@ -533,8 +528,7 @@ include /etc/drbd.d/*.res;</screen>
    <para>
     After these changes have been committed, Pacemaker mounts the DRBD device
     to <filename>/srv/nfs/work</filename> on the same node. Confirm this with
-    <command>mount</command> (or by looking at <filename
-     >/proc/mounts</filename>).
+    <command>mount</command> (or by looking at <filename>/proc/mounts</filename>).
    </para>
   </sect2>
 

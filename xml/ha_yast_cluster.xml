@@ -12,28 +12,28 @@
 <?dbfo-need height="20em"?>
  <title>Using the &yast; Cluster Module</title>
  <info>
-  <abstract>
-   <para>The &yast; cluster module allows you to set up a cluster manually
+      <abstract>
+        <para>The &yast; cluster module allows you to set up a cluster manually
     (from scratch) or to modify options for an existing cluster.
    </para>
-   <para>
+        <para>
     However, if you prefer an automated approach for setting up a cluster,
     refer to <xref linkend="art-sleha-install-quick"/>. It describes how to install the
     needed packages and leads you to a basic two-node cluster, which is
     set up with the <systemitem>ha-cluster-bootstrap</systemitem> scripts.
    </para>
-   <para>
+        <para>
     You can also use a combination of both setup methods, for example: set up
     one node with &yast; cluster and then use one of the bootstrap scripts
     to integrate more nodes (or vice versa).
    </para>
-  </abstract>
+      </abstract>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:maintainer/>
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
@@ -298,13 +298,10 @@
    <para>
     For successful communication between the cluster nodes, define at least
     one communication channel. As transport protocol, either use multicast (UDP)
-    or unicast (UDPU) as described in <xref
-    linkend="pro-ha-installation-setup-channel1-udp" xrefstyle="select:label"/>
-    or <xref linkend="pro-ha-installation-setup-channel1-udpu"
-     xrefstyle="select:label"/>, respectively.
+    or unicast (UDPU) as described in <xref linkend="pro-ha-installation-setup-channel1-udp" xrefstyle="select:label"/>
+    or <xref linkend="pro-ha-installation-setup-channel1-udpu" xrefstyle="select:label"/>, respectively.
     If you want to define a second, redundant channel
-    (<xref linkend="pro-ha-installation-setup-channel2"
-     xrefstyle="select:label"/>),
+    (<xref linkend="pro-ha-installation-setup-channel2" xrefstyle="select:label"/>),
     both communication channels must use the <emphasis>same</emphasis> protocol.
    </para>
    <note>
@@ -759,8 +756,7 @@
       configuration to <filename>/etc/csync2/csync2.cfg</filename>.</para>
     </step>
     <step>
-     <para>To start the synchronization process now, proceed with <xref
-       linkend="sec-ha-setup-yast-csync2-sync"/>. </para>
+     <para>To start the synchronization process now, proceed with <xref linkend="sec-ha-setup-yast-csync2-sync"/>. </para>
     </step>
    </procedure>
    <figure>
@@ -802,14 +798,12 @@
     <title>Preparing for Initial Synchronization with &csync;</title>
     <step>
      <para>Copy the file <filename>/etc/csync2/csync2.cfg</filename>
-      manually to all nodes after you have configured it as described in <xref
-       linkend="pro-ha-installation-setup-csync2-yast"/>. </para>
+      manually to all nodes after you have configured it as described in <xref linkend="pro-ha-installation-setup-csync2-yast"/>. </para>
     </step>
     <step>
      <para> Copy the file <filename>/etc/csync2/key_hagroup</filename> that you
       have generated on one node in <xref linkend="step-csync2-generate-key"/>
-      of <xref linkend="pro-ha-installation-setup-csync2-yast"
-       xrefstyle="select:label"/>
+      of <xref linkend="pro-ha-installation-setup-csync2-yast" xrefstyle="select:label"/>
       to <emphasis>all</emphasis> nodes in the cluster. It is needed for
       authentication by &csync;. However, do <emphasis>not</emphasis>
       regenerate the file on the other nodes&mdash;it needs to be the same

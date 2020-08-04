@@ -4,30 +4,31 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-
 <chapter xml:id="sec-ha-geo-more" version="5.0"
  xmlns="http://docbook.org/ns/docbook"
  xmlns:xi="http://www.w3.org/2001/XInclude"
  xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>For More Information</title>
-  <itemizedlist>
+  <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <itemizedlist>
    <listitem>
     <para>
      More documentation for this product is available at
-     <link
-      xlink:href="https://documentation.suse.com/sle-ha/15-SP2"/>.
+     <link xlink:href="https://documentation.suse.com/sle-ha/15-SP2"/>.
      For example, the <citetitle>&geoquick;</citetitle> guides you through
      the basic setup of a &geo; cluster, using the &geo; bootstrap scripts
-     provided by the <systemitem xmlns='http://docbook.org/ns/docbook'
-      class='resource'>ha-cluster-bootstrap</systemitem>
+     provided by the <systemitem xmlns="http://docbook.org/ns/docbook" class="resource">ha-cluster-bootstrap</systemitem>
      package.
     </para>
    </listitem>
    <listitem>
     <para>
      Find information about data replication across &geo; clusters via DRBD in
-     the following &sbp; document: <link xlink:href=
-     "https://documentation.suse.com/sbp/all/html/SBP-DRBD/index.html"/>.
+     the following &sbp; document: <link xlink:href="https://documentation.suse.com/sbp/all/html/SBP-DRBD/index.html"/>.
      </para>
     </listitem>
   </itemizedlist>

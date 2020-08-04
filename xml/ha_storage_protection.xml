@@ -11,8 +11,8 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Storage Protection and SBD</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
     SBD (&stonith; Block Device) provides a node fencing mechanism for
     Pacemaker-based clusters through the exchange of messages via shared block
     storage (SAN, iSCSI, FCoE, etc.). This isolates the fencing
@@ -21,31 +21,31 @@
     nodes are really stopped. Under certain conditions, it is also possible to use
     SBD without shared storage, by running it in diskless mode.
    </para>
-   <para>
+        <para>
     The <package>ha-cluster-bootstrap</package> scripts provide an automated
     way to set up a cluster with the option of using SBD as fencing mechanism.
     For details, see the <xref linkend="art-sleha-install-quick"/>. However,
     manually setting up SBD provides you with more options regarding the
     individual settings.
    </para>
-   <para>
+        <para>
     This chapter explains the concepts behind SBD. It guides you through
     configuring the components needed by SBD to protect your cluster from
     potential data corruption in case of a split brain scenario.
    </para>
-   <para>
+        <para>
     In addition to node level fencing, you can use additional mechanisms for storage
     protection, such as LVM2 exclusive activation or OCFS2 file locking support
     (resource level fencing). They protect your system against administrative or
     application faults.
    </para>
-  </abstract>
+      </abstract>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:maintainer/>
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
@@ -150,8 +150,7 @@
  <title>Overview of Manually Setting Up SBD</title>
  <para>
   The following steps are necessary to manually set up storage-based protection.
-  They must be executed as &rootuser;. Before you start, check <xref
-  linkend="sec-ha-storage-protect-req" xrefstyle="sec.ha.storage.protect.req"/>.
+  They must be executed as &rootuser;. Before you start, check <xref linkend="sec-ha-storage-protect-req" xrefstyle="sec.ha.storage.protect.req"/>.
   </para>
  <procedure>
    <step>
@@ -178,8 +177,7 @@
    </step>
    <step>
     <para>
-     <xref linkend="sec-ha-storage-protect-test" xrefstyle="select:title"
-     />
+     <xref linkend="sec-ha-storage-protect-test" xrefstyle="select:title"/>
     </para>
    </step>
   </procedure>
@@ -347,8 +345,7 @@
        <para>
         This timeout is set in the CIB as a global cluster property. If not set
         explicitly, it defaults to <literal>0</literal>, which is appropriate for
-        using SBD with one to three devices. For use of SBD in diskless mode, see <xref
-        linkend="pro-ha-storage-protect-confdiskless"/> for more details.</para>
+        using SBD with one to three devices. For use of SBD in diskless mode, see <xref linkend="pro-ha-storage-protect-confdiskless"/> for more details.</para>
       </listitem>
      </varlistentry>
     </variablelist>
@@ -359,7 +356,7 @@
   </para>
    <example xml:id="ex-ha-storage-protect-sbd-timings">
     <title>Formula for Timeout Calculation</title>
-    <screen>Timeout (msgwait) >= (Timeout (watchdog) * 2)
+    <screen>Timeout (msgwait) &gt;= (Timeout (watchdog) * 2)
 stonith-timeout = Timeout (msgwait) + 20%</screen>
    </example>
    <para>
@@ -378,9 +375,7 @@ stonith-timeout = Timeout (msgwait) + 20%</screen>
   <title>Setting Up the Watchdog</title>
   <para> &productname; ships with several kernel modules that provide
    hardware-specific watchdog drivers. For a list of the most commonly used
-   ones, see <xref
-   linkend="tab-ha-storage-protect-watchdog-drivers" xrefstyle="select:title
-   nopage"/>.
+   ones, see <xref linkend="tab-ha-storage-protect-watchdog-drivers" xrefstyle="select:title    nopage"/>.
  </para>
  <para>
   For clusters in production environments we recommend to use a hardware-specific
@@ -471,7 +466,7 @@ stonith-timeout = Timeout (msgwait) + 20%</screen>
       </step>
       <step>
      <para> Enable the watchdog module that matches your hardware: </para>
-     <screen>&prompt.root;<command>echo</command> <replaceable>WATCHDOG_MODULE</replaceable> > /etc/modules-load.d/watchdog.conf
+     <screen>&prompt.root;<command>echo</command> <replaceable>WATCHDOG_MODULE</replaceable> &gt; /etc/modules-load.d/watchdog.conf
 &prompt.root;<command>systemctl</command> restart systemd-modules-load</screen>
     </step>
     <step>
@@ -485,8 +480,7 @@ stonith-timeout = Timeout (msgwait) + 20%</screen>
    <title>Using the Software Watchdog (softdog)</title>
    <para>
     For clusters in production environments we recommend to use a hardware-specific watchdog
-    driver. However, if no watchdog matches your hardware, <systemitem class="resource"
-    >softdog</systemitem> can be used as kernel watchdog module. </para>
+    driver. However, if no watchdog matches your hardware, <systemitem class="resource">softdog</systemitem> can be used as kernel watchdog module. </para>
 
    <important>
     <title>Softdog Limitations</title>
@@ -502,13 +496,13 @@ stonith-timeout = Timeout (msgwait) + 20%</screen>
     <title>Loading the Softdog Kernel Module</title>
     <step>
      <para>Enable the softdog driver:</para>
-     <screen>&prompt.root;<command>echo</command> softdog > /etc/modules-load.d/watchdog.conf</screen>
+     <screen>&prompt.root;<command>echo</command> softdog &gt; /etc/modules-load.d/watchdog.conf</screen>
     </step>
     <step>
      <para>Add the <systemitem class="resource">softdog</systemitem>
           module in <filename>/etc/modules-load.d/watchdog.conf</filename>
           and restart a service:</para>
-         <screen>&prompt.root;<command>echo</command> softdog > /etc/modules-load.d/watchdog.conf
+         <screen>&prompt.root;<command>echo</command> softdog &gt; /etc/modules-load.d/watchdog.conf
 &prompt.root;<command>systemctl</command> restart systemd-modules-load</screen>
     </step>
     <step>
@@ -532,14 +526,12 @@ stonith-timeout = Timeout (msgwait) + 20%</screen>
    </step>
    <step>
     <para>
-     <xref linkend="pro-ha-storage-protect-sbd-config" xrefstyle="select:title"
-     />
+     <xref linkend="pro-ha-storage-protect-sbd-config" xrefstyle="select:title"/>
     </para>
    </step>
    <step>
     <para>
-     <xref linkend="pro-ha-storage-protect-sbd-services" xrefstyle="select:title"
-     />
+     <xref linkend="pro-ha-storage-protect-sbd-services" xrefstyle="select:title"/>
     </para>
    </step>
    <step>
@@ -555,8 +547,7 @@ stonith-timeout = Timeout (msgwait) + 20%</screen>
   </procedure>
   <para>
     Before you start, make sure the block device or devices you want to use for
-    SBD meet the requirements specified in <xref linkend="sec-ha-storage-protect-req"
-    xrefstyle="select:label"/>.
+    SBD meet the requirements specified in <xref linkend="sec-ha-storage-protect-req" xrefstyle="select:label"/>.
   </para>
   <para>
    When setting up the SBD devices, you need to take several timeout values into
@@ -692,8 +683,7 @@ Timeout (msgwait)  : 10
   </procedure>
 
   <para>
-   As a next step, test the SBD devices as described in <xref
-   linkend="pro-ha-storage-protect-sbd-test" xrefstyle="select:label"/>.
+   As a next step, test the SBD devices as described in <xref linkend="pro-ha-storage-protect-sbd-test" xrefstyle="select:label"/>.
   </para>
 
   <procedure xml:id="pro-ha-storage-protect-sbd-test">
@@ -764,8 +754,7 @@ Timeout (msgwait)  : 10
     <screen>
 &prompt.crm.conf;<command>property</command> stonith-enabled="true" <co xml:id="co-ha-sbd-st-enabled"/>
 &prompt.crm.conf;<command>property</command> stonith-watchdog-timeout=0 <co xml:id="co-ha-sbd-watchdog-timeout"/>
-&prompt.crm.conf;<command>property</command> stonith-timeout="40s" <co xml:id="co-ha-sbd-st-timeout"
-/></screen>
+&prompt.crm.conf;<command>property</command> stonith-timeout="40s" <co xml:id="co-ha-sbd-st-timeout"/></screen>
     <calloutlist>
      <callout arearefs="co-ha-sbd-st-enabled">
       <para>
@@ -902,10 +891,8 @@ SBD_WATCHDOG_TIMEOUT=5</screen>
     <step>
      <para>Run <command>crm configure</command> and set the following cluster
       properties on the &crmshell;:</para>
-<screen>&prompt.crm.conf;<command>property</command> stonith-enabled="true" <co
-        xml:id="co-ha-sbd-stonith-enabled"/>
-&prompt.crm.conf;<command>property</command> stonith-watchdog-timeout=10 <co
-        xml:id="co-ha-sbd-diskless-watchdog-timeout"/></screen>
+<screen>&prompt.crm.conf;<command>property</command> stonith-enabled="true" <co xml:id="co-ha-sbd-stonith-enabled"/>
+&prompt.crm.conf;<command>property</command> stonith-watchdog-timeout=10 <co xml:id="co-ha-sbd-diskless-watchdog-timeout"/></screen>
     <calloutlist>
      <callout arearefs="co-ha-sbd-stonith-enabled">
       <para>

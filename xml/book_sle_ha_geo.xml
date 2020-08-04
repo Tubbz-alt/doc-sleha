@@ -15,19 +15,23 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&geoguide;</title>
   <info>
-  <productnumber>&productnumber;</productnumber>
-   <productname>&productname;</productname>
-   <date><?dbtimestamp?></date>
-   <xi:include href="common_copyright_gfdl.xml"/>
-    <abstract>
-    <para>
+      <productnumber>&productnumber;</productnumber>
+      <productname>&productname;</productname>
+      <date>
+        <?dbtimestamp?>
+      </date>
+      <xi:include href="common_copyright_gfdl.xml"/>
+      <abstract>
+        <para>
      &abstract-geoguide;
     </para>
-    </abstract>
-   <xi:include href="ha_authors.xml"/>
-  </info>
-
- <xi:include href="geo_challenges_i.xml"/>
+      </abstract>
+      <xi:include href="ha_authors.xml"/>
+      <dm:docmanager>
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <xi:include href="geo_challenges_i.xml"/>
  <xi:include href="geo_concept_i.xml"/>
  <xi:include href="geo_requirements_i.xml"/>
  <xi:include href="geo_booth_i.xml"/>

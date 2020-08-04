@@ -22,26 +22,26 @@
 <!--fate#312287 (SP3), fate#311403 (SP3)-->
  <title>Network Device Bonding</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
    For many systems, it is desirable to implement network connections that
    comply to more than the standard data security or availability
    requirements of a typical Ethernet device. In these cases, several
    Ethernet devices can be aggregated to a single bonding device.
    </para>
-  </abstract>
+      </abstract>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
         <dm:maintainer/>
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
       </dm:docmanager>
     </info>
- <para>
+    <para>
   The configuration of the bonding device is done by means of bonding module
   options. The behavior is determined through the mode of the bonding
   device. By default, this is <systemitem>mode=active-backup</systemitem>,

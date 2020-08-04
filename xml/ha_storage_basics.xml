@@ -9,18 +9,18 @@
  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-ha-storage-dlm">
  <title>Distributed Lock Manager (DLM)</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
     The Distributed Lock Manager (DLM) in the kernel is the base component used
     by &ocfs;, GFS2, Cluster MD, and &clvm; (lvmlockd) to provide active-active
     storage at each respective layer.
    </para>
-  </abstract>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:translation>yes</dm:translation>
-  </dm:docmanager>
- </info>
- <sect1 xml:id="sec-ha-storage-dlm-protocol">
+      </abstract>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>no</dm:translation>
+      </dm:docmanager>
+    </info>
+    <sect1 xml:id="sec-ha-storage-dlm-protocol">
   <title>Protocols for DLM Communication</title>
 
   <para>
@@ -28,8 +28,7 @@
    for &ha; clusters. This is also true for DLM communication. If network bonding
    (Link Aggregation Control Protocol, LACP) cannot be used for any reason, we
    highly recommend to define a redundant communication channel (a second ring)
-   in &corosync;. For details, see <xref
-   linkend="pro-ha-installation-setup-channel2"/>.
+   in &corosync;. For details, see <xref linkend="pro-ha-installation-setup-channel2"/>.
   </para>
   <para>
    Depending on the configuration in &corosync.conf;, DLM then decides

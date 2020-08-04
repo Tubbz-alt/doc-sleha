@@ -40,7 +40,7 @@
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
@@ -135,9 +135,7 @@
 
   <para>
    The &hasi; has the same supported upgrade paths as the underlying base system. For a complete
-   overview, see the section <link
-   xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-upgrade-paths.html#sec-upgrade-paths-supported"
-   ><citetitle>Supported Upgrade Paths to &sls; &productnumber;</citetitle></link> in the
+   overview, see the section <link xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-upgrade-paths.html#sec-upgrade-paths-supported"><citetitle>Supported Upgrade Paths to &sls; &productnumber;</citetitle></link> in the
    <citetitle>&sls; &upguide;</citetitle>.
   </para>
 
@@ -368,8 +366,7 @@
           </para>
          </listitem>
          <listitem>
-          <para>DRBD&nbsp;8 to DRBD&nbsp;9: <xref
-           linkend="sec-ha-drbd-migrate" xrefstyle="select:title nopage"/></para>
+          <para>DRBD&nbsp;8 to DRBD&nbsp;9: <xref linkend="sec-ha-drbd-migrate" xrefstyle="select:title nopage"/></para>
          </listitem>
         </itemizedlist>
        </entry>
@@ -465,8 +462,7 @@
           </para>
          </listitem>
          <listitem>
-          <para>Clustered LVM: <xref
-           linkend="sec-ha-clvm-migrate" xrefstyle="select:title nopage"/></para>
+          <para>Clustered LVM: <xref linkend="sec-ha-clvm-migrate" xrefstyle="select:title nopage"/></para>
          </listitem>
         </itemizedlist>
        </entry>
@@ -528,8 +524,7 @@
           </para>
          </listitem>
          <listitem>
-          <para>Clustered LVM: <xref
-           linkend="sec-ha-clvm-migrate" xrefstyle="select:title nopage"/></para>
+          <para>Clustered LVM: <xref linkend="sec-ha-clvm-migrate" xrefstyle="select:title nopage"/></para>
          </listitem>
         </itemizedlist>
        </entry>
@@ -738,8 +733,7 @@
     <step>
      <para>
       For each cluster node, perform an upgrade to the desired target
-      version of &sls; and &productname;&mdash;see <xref
-      linkend="sec-ha-migration-upgrade-oview"/>.
+      version of &sls; and &productname;&mdash;see <xref linkend="sec-ha-migration-upgrade-oview"/>.
      </para>
     </step>
     <step>
@@ -861,8 +855,7 @@
       of upgrading them), see <xref linkend="sec-ha-requirements-sw"/> for the
       list of modules required for &productname; &productnumber;. Find more
       information about modules, extensions and related products in the release
-      notes for &sls; 15. They are available at <link
-       xlink:href="https://www.suse.com/releasenotes/"/>.
+      notes for &sls; 15. They are available at <link xlink:href="https://www.suse.com/releasenotes/"/>.
      </para>
     </important>
     <step>
@@ -881,8 +874,7 @@
     <step>
      <para>
       For each cluster node, perform an upgrade to the desired target
-      version of &sls; and &productname;&mdash;see <xref
-      linkend="sec-ha-migration-upgrade-oview"/>.
+      version of &sls; and &productname;&mdash;see <xref linkend="sec-ha-migration-upgrade-oview"/>.
      </para>
     </step>
     <step>
@@ -894,8 +886,7 @@
     <step>
      <para>If you use &clvm;, you need to migrate from clvmd to lvmlockd.
       See the man page of <command>lvmlockd</command>, section
-      <citetitle>changing a clvm VG to a lockd VG</citetitle> and <xref
-      linkend="sec-ha-clvm-migrate"/>.
+      <citetitle>changing a clvm VG to a lockd VG</citetitle> and <xref linkend="sec-ha-clvm-migrate"/>.
      </para>
     </step>
     <step>
@@ -969,8 +960,7 @@
    <itemizedlist>
     <listitem>
      <para>
-      For a more general rolling upgrade, refer to <xref
-      linkend="pro-ha-migration-rolling-upgrade" xrefstyle="select:label"/>.
+      For a more general rolling upgrade, refer to <xref linkend="pro-ha-migration-rolling-upgrade" xrefstyle="select:label"/>.
      </para>
     </listitem>
     <listitem>

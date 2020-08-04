@@ -10,7 +10,12 @@
 <!--taroth 2014-1120: https://fate.suse.com/316112-->
  <title>Setting Up IP Relocation via DNS Update</title>
 
- <para>
+ <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   In case one site of your &geo; cluster is down and a ticket failover appears,
   you usually need to adjust the network routing accordingly (or you need to
   have configured a network failover for each ticket). Depending on the kind of
@@ -36,8 +41,7 @@
     <remark>taroth 2014-11-21: lmb, would you consider the aforementioned link appropriate (WRT to
      our customers and the kind of setup that is needed here)?</remark>
     More information on how to set up DNS, including dynamic update of zone
-    data, can be found in the <link
-     xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-dns.html">
+    data, can be found in the <link xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-dns.html">
      <citetitle>&admin;</citetitle> for &sls; &productnumber;</link>.
    </para>
   </listitem>
@@ -50,8 +54,7 @@
 <screen>&prompt.root;<command>dnssec-keygen</command> -a hmac-md5 -b 128 -n USER geo-update</screen>
    <para>
     For more information, see the <command>dnssec-keygen</command> man page or the
-    <link
-     xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-dns.html#sec-dns-tsig">
+    <link xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-dns.html#sec-dns-tsig">
      <citetitle>&admin;</citetitle> for &sls; &productnumber;</link>.
    </para>
   </listitem>

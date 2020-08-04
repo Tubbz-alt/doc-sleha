@@ -40,7 +40,7 @@
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
@@ -485,8 +485,7 @@
    <step>
     <para>
      Set up an NFS server with &yast; as described in the
-     <link
-      xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-nfs.html">
+     <link xlink:href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-nfs.html">
       <citetitle>&admin;</citetitle> for &sls; &productnumber;</link>.
     </para>
    </step>

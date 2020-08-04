@@ -12,19 +12,18 @@
  <title>Managing Cluster Resources</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:maintainer/>
-   <dm:status>editing</dm:status>
-   <dm:deadline/>
-   <dm:priority/>
-   <dm:translation>yes</dm:translation>
-   <dm:languages/>
-   <dm:release/>
-   <dm:repository/>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
+      </dm:docmanager>
+    </info>
+    <para>
   In addition to configuring your cluster resources, &hawk2; allows you to
   manage existing resources from the <guimenu>Status</guimenu> screen. For a
   general overview of the screen refer to
@@ -374,8 +373,7 @@
   </procedure>
   <para>
    For more information, see &paceex;, available from
-   <link
-     xlink:href="http://www.clusterlabs.org/pacemaker/doc/"/>. Refer to section
+   <link xlink:href="http://www.clusterlabs.org/pacemaker/doc/"/>. Refer to section
    <citetitle>Resource Migration</citetitle>.
   </para>
  </sect2>

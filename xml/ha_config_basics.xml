@@ -30,14 +30,13 @@
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
       </dm:docmanager>
     </info>
-
-  <sect1 xml:id="sec-ha-config-basics-scenarios">
+    <sect1 xml:id="sec-ha-config-basics-scenarios">
    <title>Use Case Scenarios</title>
    <para>In general, clusters fall into one of two categories:</para>
    <itemizedlist>
@@ -54,7 +53,7 @@
    </para>
 
    <variablelist>
-    <title></title>
+    <title/>
     <varlistentry><!-- 1.1 -->
      <term>Two-node cluster in one location</term>
      <listitem>
@@ -310,7 +309,7 @@ C = number of cluster nodes</screen>
      <term><literal>ignore</literal>
      </term>
      <listitem>
-      <para></para>
+      <para/>
       <para>
        Setting <literal>no-quorum-policy</literal> to <literal>ignore</literal> makes
        the cluster behave like it has quorum. Resource management is
@@ -2802,8 +2801,7 @@ group g-vm1-and-services vm1 vm1-sshd \
 <screen>property node-health-strategy="migrate-on-red"</screen>
     <para>
      In case of a <systemitem>#health_disk</systemitem> attribute set to
-     <literal>red</literal>, the <systemitem
-      class="daemon">pacemaker-schedulerd</systemitem> adds <literal>-INF</literal>
+     <literal>red</literal>, the <systemitem class="daemon">pacemaker-schedulerd</systemitem> adds <literal>-INF</literal>
      to the resources' score for that node. This will cause any resources to
      move away from this node. The &stonith; resource will be the last
      one to be stopped but even if the &stonith; resource is not running

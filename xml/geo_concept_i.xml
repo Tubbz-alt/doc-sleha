@@ -10,16 +10,19 @@
  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-ha-geo-concept">
  <title>Conceptual Overview</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
     &geo; clusters based on &productnamereg; can be considered
     <quote>overlay</quote> clusters where each cluster site corresponds to a
     cluster node in a traditional cluster. The overlay cluster is managed by
     the booth cluster ticket manager (in the following called booth).
    </para>
-  </abstract>
-  </info>
- <para>
+      </abstract>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   Each of the parties involved in a &geo; cluster runs a service, the &boothd;.
   It connects to the booth daemons running at the other sites and exchanges
   connectivity details. For making cluster resources highly available across
@@ -30,12 +33,10 @@
  <para>
   If the communication between two booth instances breaks down, it might be
   because of a network breakdown between the cluster sites
-  <emphasis
-   xmlns='http://docbook.org/ns/docbook'>or</emphasis> because of
+  <emphasis xmlns="http://docbook.org/ns/docbook">or</emphasis> because of
   an outage of one cluster site. In this case, you need an additional instance
   (a third cluster site or an
-  <literal
-   xmlns='http://docbook.org/ns/docbook'>arbitrator</literal>) to
+  <literal xmlns="http://docbook.org/ns/docbook">arbitrator</literal>) to
   reach consensus about decisions (such as failover of resources across sites).
   Arbitrators are single machines (outside of the clusters) that run a booth
   instance in a special mode. Each &geo; cluster can have one or multiple

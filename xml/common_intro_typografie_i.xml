@@ -12,11 +12,10 @@
 
  <info>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
       </dm:docmanager>
- </info>
-
- <para>
+    </info>
+    <para>
   The following notices and typographical conventions are used
   in this documentation:
  </para>

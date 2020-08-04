@@ -12,19 +12,18 @@
  <title>Using the Batch Mode</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:maintainer/>
-   <dm:status>editing</dm:status>
-   <dm:deadline/>
-   <dm:priority/>
-   <dm:translation>yes</dm:translation>
-   <dm:languages/>
-   <dm:release/>
-   <dm:repository/>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
+      </dm:docmanager>
+    </info>
+    <para>
   &hawk2; provides a <guimenu>Batch Mode</guimenu>, including a
   <emphasis>cluster simulator</emphasis>. It can be used for the following:
  </para>
@@ -55,8 +54,7 @@
   change the cluster configuration. It is also possible to simulate events in
   the cluster, including nodes going online or offline, resource operations and
   tickets being granted or revoked. See
-  <xref
-    linkend="pro-hawk2-batch-inject"/> for details.
+  <xref linkend="pro-hawk2-batch-inject"/> for details.
  </para>
 
  <para>
@@ -136,8 +134,7 @@
   <step>
    <para>
     To inject events or view even more details, see
-    <xref linkend="pro-hawk2-batch-inject"
-     xrefstyle="select:label"/>.
+    <xref linkend="pro-hawk2-batch-inject" xrefstyle="select:label"/>.
     Otherwise <guimenu>Close</guimenu> the window.
    </para>
   </step>
@@ -300,8 +297,7 @@
   <step>
    <para>
     The <guimenu>Batch Mode</guimenu> dialog
-    (<xref linkend="fig-hawk2-batch-show"
-     xrefstyle="select:label"/>)
+    (<xref linkend="fig-hawk2-batch-show" xrefstyle="select:label"/>)
     shows a new line per injected event. Any event listed here is simulated
     immediately and is reflected on the <guimenu>Status</guimenu> screen.
    </para>

@@ -17,7 +17,7 @@
         <dm:bugtracker>
           <dm:assignee>taroth@suse.com</dm:assignee>
         </dm:bugtracker>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
       </dm:docmanager>
       <abstract>
         <para>
@@ -41,8 +41,7 @@
    <varlistentry>
     <term>Servers</term>
     <listitem>
-     <para> 1 to 32 Linux servers with software as specified in <xref
-       linkend="sec-ha-requirements-sw"/>. </para>
+     <para> 1 to 32 Linux servers with software as specified in <xref linkend="sec-ha-requirements-sw"/>. </para>
      &sys-req-hw-nodes;
      <para> Using <literal>pacemaker_remote</literal>, the cluster can be
       extended to include additional Linux servers beyond the 32-node limit.
@@ -53,8 +52,7 @@
     <term>Communication Channels</term>
     <listitem>
       &sys-req-hw-comm-channels;
-     <para>For details, refer to <xref linkend="cha-ha-netbonding"/> and <xref
-       linkend="pro-ha-installation-setup-channel2"/>, respectively.
+     <para>For details, refer to <xref linkend="cha-ha-netbonding"/> and <xref linkend="pro-ha-installation-setup-channel2"/>, respectively.
       <!--bmwiedemann 2015-01-12: are there alternatives to Ethernet? WLAN?
      taroth 2015-01-12: checked this with the developers, the answer was:
      cable connections are more robust-->
@@ -208,8 +206,7 @@
   </itemizedlist>
   <para>
    When using SBD as &stonith; mechanism, additional requirements apply
-   for the shared storage. For details, see <xref
-    linkend="sec-ha-storage-protect-req"/>.
+   for the shared storage. For details, see <xref linkend="sec-ha-storage-protect-req"/>.
    </para>
  </sect1>
  <sect1 xml:id="sec-ha-requirements-other">

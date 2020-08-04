@@ -12,19 +12,18 @@
  <title>Configuring Cluster Resources</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:maintainer/>
-   <dm:status>editing</dm:status>
-   <dm:deadline/>
-   <dm:priority/>
-   <dm:translation>yes</dm:translation>
-   <dm:languages/>
-   <dm:release/>
-   <dm:repository/>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
+      </dm:docmanager>
+    </info>
+    <para>
   A cluster administrator needs to create cluster resources for every resource
   or application that runs on the servers in your cluster. Cluster resources
   can include Web sites, mail servers, databases, file systems, virtual
@@ -58,8 +57,7 @@
    <listitem>
     <para>
      Needed for resource monitoring. For more information, refer to
-     <xref
-       linkend="sec-ha-config-basics-operations"/>.
+     <xref linkend="sec-ha-config-basics-operations"/>.
     </para>
     <para>
      When creating a resource, &hawk2; displays the most important resource
@@ -90,8 +88,7 @@
     <para>
      Tells the CRM what capacity a certain resource requires from a node. For
      more information, refer to
-     <xref
-      linkend="sec-config-hawk2-utilization"/>.
+     <xref linkend="sec-config-hawk2-utilization"/>.
     </para>
    </listitem>
   </varlistentry>
@@ -212,8 +209,7 @@
      <literal>lsb</literal>, <literal>ocf</literal>,
      <literal>service</literal>, <literal>stonith</literal>, or
      <literal>systemd</literal>. For more information, see
-     <xref
-       linkend="sec-ha-config-basics-raclasses"/>.
+     <xref linkend="sec-ha-config-basics-raclasses"/>.
     </para>
    </step>
    <step>
@@ -388,8 +384,7 @@
    &stonith; resources to complete the &stonith; setup. To add a &stonith;
    resource for SBD, for libvirt (&kvm;/&xen;) or for vCenter/ESX Server, the
    easiest way is to use the &hawk2; wizard (see
-   <xref
-    linkend="sec-conf-hawk2-rsc-wizard"/>). While &stonith; resources
+   <xref linkend="sec-conf-hawk2-rsc-wizard"/>). While &stonith; resources
    are configured similarly to other resources, their behavior is different in
    some respects. For details refer to <xref linkend="sec-ha-fencing-config"/>.
   </para>
@@ -486,8 +481,7 @@
    be started sequentially and stopped in the reverse order. For an example of
    a resource group and more information about groups and their properties,
    refer to
-   <xref
-    linkend="sec-ha-config-basics-resources-advanced-groups"/>.
+   <xref linkend="sec-ha-config-basics-resources-advanced-groups"/>.
   </para>
   <note>
    <title>Empty Groups</title>

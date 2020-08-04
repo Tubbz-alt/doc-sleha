@@ -27,10 +27,12 @@
         <?dbtimestamp format="B d, Y"?>
       </date>
       <xi:include href="common_copyright_gfdl.xml"/>
-      <abstract><para>&abstract-admin;</para></abstract>
+      <abstract>
+        <para>&abstract-admin;</para>
+      </abstract>
       <xi:include href="ha_authors.xml"/>
       <dm:docmanager>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
       </dm:docmanager>
     </info>
     <xi:include href="ha_intro.xml"/>

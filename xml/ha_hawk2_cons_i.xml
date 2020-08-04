@@ -12,19 +12,18 @@
  <title>Configuring Constraints</title>
 
  <info>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:maintainer/>
-   <dm:status>editing</dm:status>
-   <dm:deadline/>
-   <dm:priority/>
-   <dm:translation>yes</dm:translation>
-   <dm:languages/>
-   <dm:release/>
-   <dm:repository/>
-  </dm:docmanager>
- </info>
-
- <para>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
+      </dm:docmanager>
+    </info>
+    <para>
   After you have configured all resources, specify how the cluster should
   handle them correctly. Resource constraints let you specify on which cluster
   nodes resources can run, in which order to load resources, and what
@@ -386,11 +385,9 @@
   <title>Using Resource Sets for Constraints</title>
   <para>
    As an alternative format for defining constraints, you can use
-   <xref linkend="sec-ha-config-basics-constraints-rscset"
-    xrefstyle="select:title"/>.
+   <xref linkend="sec-ha-config-basics-constraints-rscset" xrefstyle="select:title"/>.
    They have the same ordering semantics as
-   <xref linkend="sec-ha-config-basics-resources-advanced-groups"
-     xrefstyle="select:title"/>.
+   <xref linkend="sec-ha-config-basics-resources-advanced-groups" xrefstyle="select:title"/>.
   </para>
   <procedure xml:id="pro-hawk2-constraints-sets">
    <title>Using a Resource Set for Constraints</title>
@@ -427,12 +424,10 @@
       <para>
        Proceed as described in
        <xref linkend="pro-hawk2-constraints-colocation"/> or
-       <xref
-        linkend="pro-hawk2-constraints-order"/>, apart from the
+       <xref linkend="pro-hawk2-constraints-order"/>, apart from the
        step where you define the resources for the constraint
        (<xref linkend="step-hawk2-col-rsc" xrefstyle="select:label"/> or
-       <xref
-        linkend="step-hawk2-order-rsc"/>):
+       <xref linkend="step-hawk2-order-rsc"/>):
       </para>
      </step>
      <step>
@@ -486,8 +481,7 @@
    For more information on configuring constraints and detailed background
    information about the basic concepts of ordering and colocation, refer to
    the documentation available at
-   <link
-     xlink:href="http://www.clusterlabs.org/pacemaker/doc/"/>:
+   <link xlink:href="http://www.clusterlabs.org/pacemaker/doc/"/>:
   </para>
   <itemizedlist>
    <listitem>
@@ -610,8 +604,7 @@
     <para>
      Add the <literal>resource-stickiness</literal> meta attribute to the
      resource as described in
-     <xref linkend="pro-conf-hawk2-rsc-modify" xrefstyle="select:label title nopage"
-      />,
+     <xref linkend="pro-conf-hawk2-rsc-modify" xrefstyle="select:label title nopage"/>,
      <xref linkend="step-hawk2-rsc-modify-params" xrefstyle="select:label"/>.
     </para>
    </step>
@@ -623,8 +616,7 @@
     <informalfigure>
      <mediaobject>
       <imageobject role="fo">
-       <imagedata fileref="hawk2-rsc-stickiness.png" width="100%"
-      format="PNG"/>
+       <imagedata fileref="hawk2-rsc-stickiness.png" width="100%" format="PNG"/>
       </imageobject>
       <imageobject role="html">
        <imagedata fileref="hawk2-rsc-stickiness.png" width="100%" format="PNG"/>
@@ -754,8 +746,7 @@
    <para>
     Before you can add utilization attributes to a resource, you need to have
     set utilization attributes for your cluster nodes as described in
-    <xref linkend="pro-hawk2-utilization-node"
-    xrefstyle="select:label"/>.
+    <xref linkend="pro-hawk2-utilization-node" xrefstyle="select:label"/>.
    </para>
    <step>
     <para>
@@ -787,8 +778,7 @@
     <para>
      From the empty drop-down box, select one of the utilization attributes
      that you have configured for the nodes in
-     <xref linkend="pro-hawk2-utilization-node"
-     xrefstyle="select:label"/>.
+     <xref linkend="pro-hawk2-utilization-node" xrefstyle="select:label"/>.
     </para>
    </step>
    <step>

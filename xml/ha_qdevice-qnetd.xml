@@ -13,29 +13,26 @@
    <title>QDevice and QNetd</title>
    <info>
       <abstract>
-         <para>
+        <para>
             &qdevice; and &qnet; participate in quorum decisions.
-            With the assistance from the arbitrator <systemitem
-               class="daemon">corosync-qnetd</systemitem>, <systemitem
-               class="daemon">corosync-qdevice</systemitem> provides
+            With the assistance from the arbitrator <systemitem class="daemon">corosync-qnetd</systemitem>, <systemitem class="daemon">corosync-qdevice</systemitem> provides
             a configurable number of votes, so allowing a cluster
             to sustain more node failures than the standard quorum rules
             allow. We strongly recommend deploying <systemitem class="daemon">corosync-qnetd</systemitem> and <systemitem class="daemon">corosync-qdevice</systemitem> for two-node clusters, but using &qnet; and &qdevice; is also recommended in general for clusters with an even number of nodes.  
          </para>
       </abstract>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-         <dm:maintainer/>
-         <dm:status>editing</dm:status>
-         <dm:deadline/>
-         <dm:priority/>
-         <dm:translation>yes</dm:translation>
-         <dm:languages/>
-         <dm:release/>
-         <dm:repository/>
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
       </dm:docmanager>
-   </info>
-
-   <sect1 xml:id="sec-ha-qdevice-overview">
+    </info>
+    <sect1 xml:id="sec-ha-qdevice-overview">
       <title>Conceptual Overview</title>
       <para>
          In comparison to calculating quora among cluster nodes, the
@@ -85,8 +82,7 @@
                <para>
                   A systemd service (a daemon, the <quote>&qnet; server</quote>) which
                   is not part of the cluster.
-                  The systemd service provides a vote to the <systemitem
-                     class="daemon">corosync-qdevice</systemitem> daemon.
+                  The systemd service provides a vote to the <systemitem class="daemon">corosync-qdevice</systemitem> daemon.
                </para>
                <para>
                   To improve security, <systemitem class="daemon">corosync-qnetd</systemitem>
@@ -144,8 +140,7 @@
                <para>
                   &qdevice; supports a set of commands (<quote>heuristics</quote>).
                   The commands are executed locally on startup of cluster services,
-                  cluster membership change, successful connect to <systemitem
-                     class="daemon">corosync-qnetd</systemitem>, or optionally, at
+                  cluster membership change, successful connect to <systemitem class="daemon">corosync-qnetd</systemitem>, or optionally, at
                   regular times.
                   The heuristics can be set with the <parameter>quorum.device.heuristics</parameter>
                   key (in the <filename>corosync.conf</filename> file) or with the
@@ -235,8 +230,7 @@
             </para>
             <screen>&prompt.root;<command>zypper</command> install corosync-qnetd</screen>
             <para>
-               You do not need to manually start the <systemitem class="daemon"
-                  >corosync-qnetd</systemitem> service. The bootstrap scripts
+               You do not need to manually start the <systemitem class="daemon">corosync-qnetd</systemitem> service. The bootstrap scripts
                will take care of the startup process during the qdevice stage.
       </para>
          </step>
@@ -284,8 +278,7 @@
             <screen>&prompt.root;<command>crm</command> cluster init qdevice --qnetd-hostname=&node3;</screen>
             <para>
                If you want to change the default settings, get a list of all
-               possible options with the command <command
-                  >crm cluster init qdevice --help</command>.
+               possible options with the command <command>crm cluster init qdevice --help</command>.
                All options related to &qdevice; start with
                <option>--qdevice-<replaceable>NAME</replaceable></option>.
             </para>
@@ -312,8 +305,7 @@
          <filename>/usr/sbin/my-script.sh</filename> you can run it on
          one of your cluster nodes as follows:
       </para>
-      <screen>&prompt.root;<command>crm</command
-> cluster init qdevice --qdevice-hostname=&node3; \
+      <screen>&prompt.root;<command>crm</command> cluster init qdevice --qdevice-hostname=&node3; \
      --qdevice-heuristics=/usr/sbin/my-script.sh  \
      --qdevice-heuristics-mode=on</screen>
       <para>
@@ -393,8 +385,7 @@ Membership information
                   As the node ID is not explicitly specified in <filename>corosync.conf</filename>
                   this ID is a 32-bit integer representation of the IP address.
                   In this example, the value
-                  <literal>3232235777</literal> stands for the IP address <systemitem
-                     class="ipaddress">&subnetI;.1</systemitem>.
+                  <literal>3232235777</literal> stands for the IP address <systemitem class="ipaddress">&subnetI;.1</systemitem>.
                </para>
             </callout>
             <callout arearefs="co-quorum-quorate">

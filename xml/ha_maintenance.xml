@@ -10,41 +10,39 @@
  xml:id="cha-ha-maintenance">
  <title>Executing Maintenance Tasks</title>
  <info>
-  <abstract>
-   <para>
+      <abstract>
+        <para>
     To perform maintenance tasks on the cluster nodes, you might need to stop
     the resources running on that node, to move them, or to shut down or reboot
     the node. It might also be necessary to temporarily take over the control of
     resources from the cluster, or even to stop the cluster service while resources
     remain running.
    </para>
-   <para>
+        <para>
     This chapter explains how to manually take down a cluster node without
     negative side-effects. It also gives an overview of different options the
     cluster stack provides for executing maintenance tasks.
    </para>
-  </abstract>
-  <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
-   <dm:maintainer/>
-   <dm:status>editing</dm:status>
-   <dm:deadline/>
-   <dm:priority/>
-   <dm:translation>yes</dm:translation>
-   <dm:languages/>
-   <dm:release/>
-   <dm:repository/>
-  </dm:docmanager>
- </info>
- <sect1 xml:id="sec-ha-maint-shutdown-node">
+      </abstract>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:maintainer/>
+        <dm:status>editing</dm:status>
+        <dm:deadline/>
+        <dm:priority/>
+        <dm:translation>no</dm:translation>
+        <dm:languages/>
+        <dm:release/>
+        <dm:repository/>
+      </dm:docmanager>
+    </info>
+    <sect1 xml:id="sec-ha-maint-shutdown-node">
   <title>Implications of Taking Down a Cluster Node</title>
   <para>
    In &sls; &hasi; 15 SP2, the way cluster services were started and
    stopped has changed. &suse; recommends using the &crmshell;. The
    old commands with <command>systemctl</command> are still available, but
    are recommended for experienced users only.
-   For details, refer to the &suse; blog article <link
-    xlink:href="https://www.suse.com/c/suse-high-availability-cluster-services-how-to-stop-start-or-view-the-status/"
-   />.
+   For details, refer to the &suse; blog article <link xlink:href="https://www.suse.com/c/suse-high-availability-cluster-services-how-to-stop-start-or-view-the-status/"/>.
   </para>
   <para>
    The recommended way to start, stop, or view the status is:
@@ -259,8 +257,7 @@ Node <replaceable>&node2;</replaceable>: standby
      <para>
       If you want the cluster to also cease <emphasis>monitoring</emphasis> the
       resource, use the per-resource maintenance mode instead (see
-      <xref 
-      linkend="vle-ha-maint-mode-rsc"/>).
+      <xref linkend="vle-ha-maint-mode-rsc"/>).
      </para>
     </listitem>
    </varlistentry>
@@ -285,8 +282,7 @@ Node <replaceable>&node2;</replaceable>: standby
    <step>
     <para>
      Before you start, choose which of the options outlined in
-     <xref linkend="sec-ha-maint-overview" xrefstyle="select:label"
-     /> is appropriate for your situation.
+     <xref linkend="sec-ha-maint-overview" xrefstyle="select:label"/> is appropriate for your situation.
     </para>
    </step>
    <step>
@@ -516,8 +512,7 @@ Node <replaceable>&node2;</replaceable>: standby
    <step>
     <para>
      Start a Web browser and log in to the cluster as described in
-     <xref
-      linkend="sec-conf-hawk2-login"/>.
+     <xref linkend="sec-conf-hawk2-login"/>.
     </para>
    </step>
    <step>

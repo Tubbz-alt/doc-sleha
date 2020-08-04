@@ -43,7 +43,7 @@ NAME       SIZELIMIT OFFSET AUTOCLEAR RO BACK-FILE
         <dm:status>editing</dm:status>
         <dm:deadline/>
         <dm:priority/>
-        <dm:translation>yes</dm:translation>
+        <dm:translation>no</dm:translation>
         <dm:languages/>
         <dm:release/>
         <dm:repository/>
@@ -721,8 +721,7 @@ NAME       SIZELIMIT OFFSET AUTOCLEAR RO BACK-FILE
             <xref linkend="sec-ha-drbd-configure"/>), then skip the initial
             resynchronization with the following command (on both nodes):
            </para>
-           <screen>&prompt.root;<command>drbdadm</command
-              > new-current-uuid --clear-bitmap r0/0</screen>
+           <screen>&prompt.root;<command>drbdadm</command> new-current-uuid --clear-bitmap r0/0</screen>
            <para>The state will be <literal>Secondary/Secondary UpToDate/UpToDate</literal></para>
           </listitem>
           <listitem>
@@ -792,8 +791,7 @@ r0 role:Primary
    to use DRBD version 9 specific options.
   </para>
   <para>
-   If you have a stacked DRBD resource, refer also to <xref
-    linkend="sec-ha-drbd-resource-stacking"/> for more information.
+   If you have a stacked DRBD resource, refer also to <xref linkend="sec-ha-drbd-resource-stacking"/> for more information.
   </para>
   <para>
    To keep your data and allow to add new nodes without re-creating new
@@ -807,8 +805,7 @@ r0 role:Primary
    </step>
    <step>
     <para>
-     Update all the DRBD packages on all of your nodes, see <xref
-      linkend="sec-ha-drbd-install"/>.
+     Update all the DRBD packages on all of your nodes, see <xref linkend="sec-ha-drbd-install"/>.
     </para>
    </step>
    <step>
@@ -844,8 +841,7 @@ r0 role:Primary
     <para>
      Re-create the metadata based on the new configuration:
     </para>
-    <screen>&prompt.root;<command>drbdadm</command> create-md <replaceable
-     >RESOURCE</replaceable></screen>
+    <screen>&prompt.root;<command>drbdadm</command> create-md <replaceable>RESOURCE</replaceable></screen>
    </step>
    <step>
     <para>
@@ -860,8 +856,7 @@ r0 role:Primary
   <para>
    A stacked DRBD device contains two other devices of which at least one
    device is also a DRBD resource. In other words, DRBD adds an additional
-   node on top of an already existing DRBD resource (see <xref
-    linkend="fig-ha-drbd-resource-stacking"/>). Such a replication setup
+   node on top of an already existing DRBD resource (see <xref linkend="fig-ha-drbd-resource-stacking"/>). Such a replication setup
    can be used for backup and disaster recovery purposes.
   </para>
  <!--taroth 2017-09-21: Please remove gradient blend in SVG version
@@ -889,8 +884,7 @@ r0 role:Primary
    Your production environment uses the stacked device. For example,
    if you have a DRBD device <filename>/dev/drbd0</filename> and a stacked
    device <filename>/dev/drbd10</filename> on top, the file system will
-   be created on <filename>/dev/drbd10</filename>, see <xref
-    linkend="exa-ha-drbd-stacked-drbd"/> for more details.
+   be created on <filename>/dev/drbd10</filename>, see <xref linkend="exa-ha-drbd-stacked-drbd"/> for more details.
   </para>
 
   <example xml:id="exa-ha-drbd-stacked-drbd">

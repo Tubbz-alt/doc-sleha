@@ -9,7 +9,12 @@
  xmlns:xi="http://www.w3.org/2001/XInclude"
  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="cha-ha-geo-rsc">
  <title>Configuring Cluster Resources and Constraints</title>
- <para>
+ <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+        <dm:translation>yes</dm:translation>
+      </dm:docmanager>
+    </info>
+    <para>
   Apart from the resources and constraints that you need to define for your
   specific cluster setup, &geo; clusters require additional resources and
   constraints as described below. You can either configure them with the
@@ -38,8 +43,7 @@
   If you have set up your &geo; cluster with the bootstrap scripts, the cluster
   resources needed for booth have been configured already (including a resource
   group for boothd). In this case, you can skip
-  <xref
-  linkend="sec-ha-geo-rsc-boothd" xrefstyle="select:label"/> and only
+  <xref linkend="sec-ha-geo-rsc-boothd" xrefstyle="select:label"/> and only
   need to execute the remaining steps below to complete the cluster resource
   configuration.
  </para>
@@ -87,8 +91,7 @@
    To simplify transfer, any resources with site-specific parameters can be
    configured in such a way that the parameters' values depend on the name of
    the cluster site where the resource is running (see also
-   <xref
-    linkend="cha-ha-geo-req"/>, <citetitle>Other Requirements and
+   <xref linkend="cha-ha-geo-req"/>, <citetitle>Other Requirements and
    Recommendations</citetitle>).
   </para>
   <para>
@@ -287,8 +290,7 @@
 
   <para>
    <xref linkend="pro-ha-geo-rsc-sync-cib-export"/> and
-   <xref
-    linkend="pro-ha-geo-rsc-sync-cib-import"/> give an example of how
+   <xref linkend="pro-ha-geo-rsc-sync-cib-import"/> give an example of how
    to do so. They are based on the following prerequisites:
   </para>
 
@@ -313,8 +315,7 @@
      This can either be done manually (by editing &corosync.conf;) or with the
      &yast; cluster module (by switching to the <guimenu>Communication
      Channels</guimenu> category and defining a <guimenu>Cluster
-     Name</guimenu>). Afterward, stop and start the <systemitem
-      class="service">pacemaker</systemitem>
+     Name</guimenu>). Afterward, stop and start the <systemitem class="service">pacemaker</systemitem>
      service for the changes to take effect:
     </para>
     <screen>&prompt.root;<command>crm</command> cluster restart</screen></listitem>
@@ -367,8 +368,7 @@
        Any resources and constraints of your specific setup that you need on
        all sites of the &geo; cluster (for example, resources for DRBD as
        described in the
-       <link
-        xlink:href="https://documentation.suse.com/sbp/all/html/SBP-DRBD/index.html"><citetitle>&sbp;</citetitle>
+       <link xlink:href="https://documentation.suse.com/sbp/all/html/SBP-DRBD/index.html"><citetitle>&sbp;</citetitle>
        document</link>).
       </para>
      </callout>
@@ -376,8 +376,7 @@
       <para>
        Resources and constraints for boothd (primitives, booth resource group,
        ticket dependency, additional ordering constraint), see
-       <xref
-          linkend="sec-ha-geo-rsc-ticket-dep" xrefstyle="select:label"/>
+       <xref linkend="sec-ha-geo-rsc-ticket-dep" xrefstyle="select:label"/>
        to <xref linkend="sec-ha-geo-rsc-order" xrefstyle="select:label"/>.
       </para>
      </callout>
